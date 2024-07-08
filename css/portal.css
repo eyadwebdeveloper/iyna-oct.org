@@ -1,0 +1,540 @@
+ /*================================ START HERO ========================================*/
+ body{
+    background: #000 url('../imgs/neuo.png')  center fixed ;
+ }
+ .hero{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+ }
+ .hero hr{
+   width: 120px;
+   border: 3px solid purple;
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+ .hero h1{
+   font-size: 40px;
+   color: #fff;
+ }
+ .hero h3{
+   color: gray;
+ }
+ .btn{
+   background: purple;
+   border: 2px solid purple;
+   padding: 10px;
+   margin-top: 20px;
+   border-radius: 5px;
+   transition: .5s ease-in-out;
+   color: #fff;
+ }
+ .btn:hover{
+   transform: translateY(-7px);
+   background: none;
+ }
+ 
+ select{
+    width: 90%;
+ }
+ .wrapper input,
+ select {
+   height: 40px;
+   padding: 5px;
+   font-size: 18px;
+ }
+ .wrapper input,
+ select,
+ .wrapper form textarea {
+   border: none;
+   outline: none;
+   border: 3px solid #dfd6d6;
+   border-radius: 5px;
+   margin-bottom: 15px;
+   padding: 5px;
+   font-family: sans-serif;
+   font-size: 18px;
+ }
+ .wrapper form textarea {
+   resize: none;
+   min-height: 80px;
+   overflow: hidden;
+ }
+ 
+ input:hover,
+ select:hover,
+ form textarea:hover {
+   border: 3px solid grey;
+ }
+ input:focus,
+ select,
+ form textarea:focus {
+   border: 3px solid purple;
+ }
+ .questions{
+    padding: 30px;
+    padding-top: 120px;
+ }
+ .wraps{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  padding-top: 150px;
+ }
+ .wrap{
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 50px;
+  background-color: rgba(0,0,0,.7);
+ }
+ @media only screen and (max-width: 750px){
+  .wraps{
+    width: 80%;
+  }
+ }
+
+ .questions h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+ }
+ form{
+    width: 100%;
+ }
+ form .q{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+
+ }
+ .q input{
+    border: none;
+    outline: none;
+    border: 3px solid #161616;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    background: none;
+    font-size: 25px;
+    background: #2b2929;
+    transition: .5s ease-in-out;
+    color: #fff;
+ }
+ 
+ .q input:hover{
+    border-color: grey;
+ }
+ .q input:focus{
+    border-color: purple;
+ }
+ .q label, .label{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 10px;
+
+
+ }
+ label.checc{
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-left: 0;
+  
+ }
+ 
+ .select-btn, li{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ .select-btn{
+   height: 65px;
+   padding: 0 20px;
+   font-size: 22px;
+   background: #2b2929;
+   border-radius: 7px;
+   justify-content: space-between;
+   border: 3px solid #161616;
+   margin: auto;
+ }
+ .select-btn span{
+  color: #fff;
+ }
+ .select-btn i{
+   font-size: 31px;
+   transition: transform 0.3s linear;
+   color: #fff;
+ }
+ .wrapper.active .select-btn i{
+   transform: rotate(-180deg);
+ }
+ .content{
+   display: none;
+   padding: 20px;
+   margin-top: 15px;
+   background: #000;
+   border-radius: 7px;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+   color: #fff;
+   max-width: 1200px;
+   margin: auto;
+ }
+ .wrapper.active .content{
+   display: block;
+ }
+ .content .search{
+   position: relative;
+ }
+ .search i{
+   top: 50%;
+   left: 15px;
+   color: #999;
+   font-size: 20px;
+   pointer-events: none;
+   transform: translateY(-80%);
+   position: absolute;
+ }
+ .search input{
+   width: 100%;
+   outline: none;
+   font-size: 17px;
+   border-radius: 5px;
+   height: 65px;
+   padding: 0 20px;
+   border: 1px solid #2b2929;
+   transition: .5s ease-in-out;
+   padding-left: 42px;
+ }
+ .search input:focus{
+   border: 2px solid purple;
+ }
+ .search input::placeholder{
+   color: #bfbfbf;
+ }
+ .content .options{
+   margin-top: 10px;
+   max-height: 250px;
+   overflow-y: auto;
+   padding-right: 7px;
+ }
+ .options::-webkit-scrollbar{
+   width: 7px;
+ }
+ .options::-webkit-scrollbar-track{
+   background: #4a4747;
+   border-radius: 25px;
+ }
+ .options::-webkit-scrollbar-thumb{
+   background: #2e2d2d;
+   border-radius: 25px;
+ }
+ .options::-webkit-scrollbar-thumb:hover{
+   background: #000;
+ }
+ .options li{
+   height: 50px;
+   padding: 0 13px;
+   font-size: 21px;
+ }
+ .options li:hover, li.selected{
+   border-radius: 5px;
+   background: #2b2929;
+ }
+ 
+   .col{
+     display: flex;
+     flex-direction: column;
+     margin-right: 80px;
+   }
+   .finish input[type="radio"] {
+     display: none;
+   }
+   .finish label {
+     position: relative;
+     color: #bd0fbd;
+     cursor: pointer;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.8em;
+     border: 3px solid #bd0fbd;
+     padding: .5em 1em;
+     border-radius: 0.5em;
+     margin-bottom: 10px;
+     font-weight: 600;
+     justify-content: flex-start;
+     width: 100%;
+   }
+   .finish label:before {
+     content: "";
+     height: 2em;
+     width: 2em;
+     border: 3px solid #bd0fbd;
+     border-radius: 50%;
+   }
+   
+   .finish input[type="radio"]:checked + label:before {
+     height: 1em;
+     width: 1em;
+     border: 0.65em solid #ffffff;
+     background-color: #bd0fbd;
+     
+   }
+   .finish input[type="radio"]:checked + label {
+     background-color: purple;
+     color: #fff;
+   }
+   .finish h3{
+    margin-bottom: 30px;
+   }
+   .finish, .finishh{
+    width: 100%;
+    padding: 20px;
+    border: 3px solid #161616;
+    background: #2b2929;
+    border-radius: 7px;
+    color: #fff;
+    margin: auto;
+   }
+   .finish .arrange{
+    font-size: 17px;
+    color: #b4adad;
+   }
+   .finish img{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 300px;
+   }
+   .finish h4{
+    font-size: 25px;
+    color: grey;
+   }
+   .submit{
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+   }
+   .submit button{
+    background: none;
+    border: none;
+    outline: none;
+    border: 3px solid purple;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 25px;
+    transition: .5s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+   }
+   .submit button:hover{
+    background: purple;
+   }
+
+
+
+
+   .select-menu{
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+  }
+  .select-menu span{
+    color: #fff;
+    font-size: 21px;
+  }
+  
+  .select{
+    background: #2b2929;
+    border: 3px solid #161616;
+    padding: 20px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  .options-list{
+    width: 100%;
+    background-color: #000;
+    border-radius: 6px;
+    margin-top: 14px;
+    padding: 0 20px;
+    max-height: 160px;
+    overflow-y: auto;
+    transition: .4s linear .2s;
+    height: 0;
+    margin: auto;
+  }
+  
+  
+  .option{
+    height: 50px;
+   padding: 0 13px;
+   font-size: 21px;
+   display: flex;
+   align-items: center;
+   color: #fff;
+   margin-bottom: 5px;
+   transition: .5s ease-in-out;
+  }
+  
+  .option:hover,
+  .option.selected{
+    background: #fff;
+    border-radius: 5px;
+   background: #2b2929;
+  }
+  
+  .options-list::-webkit-scrollbar{
+    width: 4px;
+    background: #262626;
+}
+  
+  .options-list::-webkit-scrollbar-thumb{
+    background: #656262;
+}
+.options-list::-webkit-scrollbar-thumb:hover{
+    background: #000;
+}
+  
+  
+  .options-list.active{
+    height: 180px;
+  }
+  
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+  .form-group input {
+    display: none;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    cursor: pointer;
+  }
+  label .checkbox {
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 4px;
+    position: relative;
+    transition: .2s ease;
+    transition-delay: .2s;
+  }
+  label .checkbox::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #fff;
+    border-radius: 2.5px;
+    transition: .2s ease;
+    transition-delay: .2s;
+  }
+  .form-group input:checked + label .checkbox::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    transition-delay: 0s;
+  }
+  .form-group input:checked + label .checkbox {
+    background: purple;
+    transition-delay: 0s;
+  }
+  label .checkbox .check {
+    display: block;
+    width: 12px;
+    height: 6px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(-45deg);
+  }
+  label .checkbox .check::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background: #fff;
+    transition: .2s ease;
+    transition-delay: .2s;
+  }
+  label .checkbox .check::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .2s ease;
+    transition-delay: 0s;
+  }
+  .form-group input:checked + label .checkbox .check::before {
+    height: 100%;
+    transition-delay: .2s;
+  }
+  .form-group input:checked + label .checkbox .check::after {
+    width: 100%;
+    transition-delay: .4s;
+  }
+  .input-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+  }
+  .col{
+    width: 100%;
+  }
+  .last{
+    margin-bottom: 30px;
+  }
+  .cols{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  @media only screen and (max-width: 970px){
+    .cols{
+      flex-direction: column;
+    }
+    .col{
+      margin-bottom: 15px;
+    }
+  }
+
+
+  @media only screen and (max-width: 440px){
+    .cols{
+      margin-left: 0;
+      width: 110%;
+    }
+   }

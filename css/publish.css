@@ -1,0 +1,213 @@
+#publish_butt {
+    display: none;
+  }
+  .publish_sec1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20% 0;
+    align-items: center;
+  }
+  .publish_sec1 > img {
+    margin-top: -90px;
+    width: 413px;
+    height: 445px;
+  }
+  #container {
+    padding: 15%;
+  }
+  .publish_sec2 {
+    margin-bottom: 100px;
+  }
+  .publish_sec2 h3 {
+    font: var(--font-weight-extrabold) 26pt var(--inter-font-family);
+    color: var(--first-color-plate);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+  }
+  .publish_sec2 {
+    font: var(--font-weight-regular) 16pt var(--inter-font-family);
+    color: var(--white-color);
+  }
+  #publish_guidlines {
+    margin-top: 45px;
+  }
+  #publish_guidlines p {
+    font-size: 1.2rem;
+    line-height: 1.35;
+  }
+  #publish_guidlines > p > a {
+    text-decoration: none;
+    color: #923ce7;
+  }
+  #publish_criteria ol {
+    counter-reset: item;
+  }
+  #publish_criteria ol li {
+    display: block;
+    /* ========= */
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  #publish_criteria ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: var(--first-color-plate);
+    font-weight: 700;
+  }
+  .publish_form {
+    width: 60%;
+    height: max-content;
+    background-color: #6600cc;
+    border-radius: 9px;
+    padding: 40px;
+    margin: 0 auto;
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: white;
+  }
+  #publish_box > h3 {
+    font: var(--font-weight-extrabold) 32pt inter;
+    color: var(--white-color);
+    margin-bottom: 30px;
+  }
+  #publish_form {
+    display: flex;
+    flex-direction: column;
+  }
+  #publish_form input {
+    color: white;
+    border-bottom: 1.12px solid #d0d0d0;
+    border-radius: 0.56px;
+    margin-bottom: 35px;
+    background: transparent;
+    font: var(--font-weight-regular) 12pt inter;
+  }
+  #publish_form input::placeholder {
+    color: #d0d0d0;
+    font: var(--font-weight-regular) 14pt inter;
+    background: transparent;
+  }
+  #publish_form input:focus::placeholder {
+    color: transparent;
+  }
+  .publish_commands {
+    display: flex;
+    flex-direction: row;
+  }
+  #publish_upload {
+    display: none;
+  }
+  #publish_form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  #publish_form #publish_submit,
+  #publish_form label {
+    width: 170px;
+    height: 50px;
+    border-radius: 3px;
+    font: var(--font-weight-bold) 12pt inter;
+    background-color: #8842c4;
+    color: #f7f2fb;
+    cursor: pointer;
+    border: none;
+  }
+  #publish_form #publish_submit:hover,
+  #publish_form label:hover {
+    box-shadow: 0 0 35px var(--first-color-plate);
+    transition: 0.3s;
+  }
+  /* ======================== */
+  
+  #container {
+    padding: 0px 15%;
+  }
+  
+  section {
+    padding: 0 0 5rem;
+  }
+  
+  .publish_form {
+    margin-bottom: 10rem;
+  }
+  
+  @media only screen and (max-width: 1110px) {
+    .publish_sec1 > img {
+      margin-top: -45px;
+      width: 213px;
+      height: 230px;
+    }
+    .publish_sec2 h3 {
+      font-size: 14pt;
+      margin-bottom: 10px;
+    }
+    #publish_guidlines {
+      margin-top: 30px;
+    }
+    .publish_sec2 {
+      font: var(--font-weight-regular) 8pt var(--inter-font-family);
+      color: var(--white-color);
+    }
+    /* ================= */
+    .publish_form {
+      width: 100%;
+    }
+    #publish_criteria ol li {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    #publish_guidlines p {
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .publish_sec1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: none;
+    }
+    .publish_sec1 > img {
+      margin: 0 auto;
+      width: 150px;
+      height: 162px;
+    }
+    .publish_form {
+      padding: 20px;
+      /* ========== */
+      width: 100%;
+    }
+    #publish_box > h3 {
+      font-size: 14pt;
+    }
+    #publish_form input {
+      font-size: 10pt;
+    }
+    #publish_form input::placeholder {
+      font-size: 10pt;
+    }
+    .publish_commands {
+      flex-direction: column;
+    }
+    #publish_form label {
+      margin-right: 0px;
+    }
+    #publish_form #publish_submit,
+    #publish_form label {
+      width: 100px;
+      height: 30px;
+      font-size: 10pt;
+      margin: 0 auto 15px;
+    }
+    /* ================= */
+    #publish_criteria ol li {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    #publish_guidlines p {
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+  }

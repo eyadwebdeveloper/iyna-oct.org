@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="css/header.css">
+      <link rel="stylesheet" href="css/popup.css">
+      <link rel="stylesheet" href="css/portal.css">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+      <title>IYNA portal</title>
+   </head>
+   <body>
+    <div class="popup-container" id="popup">
+      <div class="popup-box">
+          <h2 id="popup-text">Welcome</h2>
+          <hr>
+          <div class="links">
+            <a class="close-btn" id="popup-link">Ok</a>
+          </div>
+      </div>
+    </div>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav head_container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <img src="imgs/LOGO2.png" alt="">
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="index.html" class="nav__link">Home</a></li>
+
+                  <li><a href="issues.html" class="nav__link">Issues</a></li>
+
+                  <li><a href="courses.html" class="nav__link">Courses</a></li>
+
+                  <li><a href="competition.html" class="nav__link">Competition</a></li>
+
+                  <li><a href="contact.html" class="nav__link">Contact</a></li>
+
+                  <li><a href="publish.html" class="nav__link">Publish</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <div class="wraps">
+        <section class="wrap hero">
+          <h1>Welcome to the application portal</h1>
+          <hr>
+          <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, amet.</h3>
+       </section>
+       <section class="wrap questions">
+          <form action="">
+             <div class="q">
+                <label for="name">Your full name</label>
+             <input name="Full Name" id="name" type="text" required/>
+           </div>
+           <div class="q">
+             <label for="email">Your Email adress</label>
+             <input name="email" id="email" type="email" required/>
+           </div>
+           <div class="q">
+             <label for="birth">Your Date of birth</label>
+             <input name="birth" id="birth" type="date" required/>
+           </div>
+           <div class="q">
+             <label for="school">High School</label>
+             <input name="school" id="school" type="text" required/>
+           </div>
+           
+           <div class="q">
+             <label for="country">Your country</label>
+             <div class="wrapper" id="country">
+                <div class="select-btn">
+                  <span id="con">Select Country</span>
+                  <i class="uil uil-angle-down"></i>
+                </div>
+                <div class="content">
+                  <div class="search">
+                    <i class="uil uil-search"></i>
+                    <input spellcheck="false" type="text" placeholder="Search">
+                  </div>
+                  <ul class="options"></ul>
+                </div>
+              </div>
+           </div>
+           <div class="q" style="margin-bottom: 0;">
+             <label for="select" class="label">Your Grade</label>
+             <div class="select-menu q" style="margin-top: 5px;">
+               <div class="select" id="select">
+                 <span>Select Grade</span>
+                 <i class="fas fa-angle-down"></i>
+               </div>
+               <input type="hidden" id="selectedGrade" />
+               <div class="options-list">
+                 <div class="option" data-value="9">Grade 9</div>
+                 <div class="option" data-value="10">Grade 10</div>
+                 <div class="option" data-value="11">Grade 11</div>
+                 <div class="option" data-value="12">Grade 12</div>
+               </div>
+             </div>
+           </div>
+           <div class="q finishh">
+             <label for="">From where did you hear about the competition?</label>
+             <div class="cols">
+               <div class="col">
+                 <div class="form-group un-re">
+                   <input type="checkbox" id="Personal-Connections">
+                   <label for="Personal-Connections" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     Personal Connections
+                   </label>
+                 </div>
+                 <div class="form-group un-re">
+                   <input type="checkbox" id="RoundPier">
+                   <label for="RoundPier" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     RoundPier Page
+                   </label>
+                 </div>
+                 <div class="form-group un-re">
+                   <input type="checkbox" id="Search">
+                   <label for="Search" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     Search Engines (e.g., Google)
+                   </label>
+                 </div>
+                 <div class="form-group">
+                   <input type="checkbox" id="Facebook">
+                   <label for="Facebook" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     Facebook Page
+                   </label>
+                 </div>
+                 <div class="form-group un-re">
+                   <input type="checkbox" id="Telegram">
+                   <label for="Telegram" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     Telegram Channels
+                   </label>
+                 </div>
+                 <div class="form-group">
+                   <input type="checkbox" id="Discord">
+                   <label for="Discord" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     Discord
+                   </label>
+                 </div>
+               </div>
+               <div class="col">
+                 <div class="form-group">
+                   <input type="checkbox" id="Ambassador">
+                   <label for="Ambassador" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     Ambassador
+                   </label>
+                 </div>
+                 <div class="form-group un-re">
+                   <input type="checkbox" id="Counselor">
+                   <label for="Counselor" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     School Counselor
+                   </label>
+                 </div>
+                 <div class="form-group">
+                   <input type="checkbox" id="LinkedIn">
+                   <label for="LinkedIn" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     LinkedIn Page
+                   </label>
+                 </div>
+                 <div class="form-group">
+                   <input type="checkbox" id="Instagram">
+                   <label for="Instagram" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     Instagram Page
+                   </label>
+                 </div>
+                 <div class="form-group un-re">
+                   <input type="checkbox" id="WhatsApp">
+                   <label for="WhatsApp" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     WhatsApp Groups
+                   </label>
+                 </div>
+                 <div class="form-group">
+                   <input type="checkbox" id="Other">
+                   <label for="Other" class="checc">
+                     <span class="checkbox">
+                       <span class="check"></span>
+                     </span>
+                     Other
+                   </label>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="q">
+             <label for="ambassador">If you have chosen an ambassador, enter the ambassador's code (optional)</label>
+             <input type="text" name="ambassador" id="ambassador">
+           </div>
+           <div class="q">
+             <label for="other">If you have chosen other, please specify</label>
+             <input type="text" name="other" id="other">
+           </div>
+           <div class="finish">
+             <h3>Deadline ends in <strong>31th june, 2024</strong></h3>
+             <div class="submit">
+                <button type="submit" id="submit">Submit form</button>
+             </div>
+           </div>
+          </form>
+       </section>
+      </div>
+      <!--=============== MAIN JS ===============-->
+      <script src="js/header.js"></script>
+      <script src="js/portal.js"></script>
+      <script type="module">
+       // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCp5YscKqWKU97TU3eq7_xLkapgCTClRlY",
+    authDomain: "iyna-portal.firebaseapp.com",
+    projectId: "iyna-portal",
+    storageBucket: "iyna-portal.appspot.com",
+    messagingSenderId: "256208881067",
+    appId: "1:256208881067:web:f37186387ac82366003eee",
+    measurementId: "G-8C9VQ9BH0F"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+
+  document.getElementById('submit').addEventListener('click', function(e){
+    e.preventDefault();
+    // validiation
+    const optionsList = document.querySelector('.options-list');
+    const selectedOption = [...optionsList.children].find((option) => option.classList.contains('selected'));
+    const selectedGrade = selectedOption? selectedOption.getAttribute('data-value') : null;
+
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const selectedValues = [];
+    checkboxes.forEach((checkbox) => {
+      selectedValues.push(checkbox.id);
+    });
+
+if (document.getElementById('name').value === '') {
+     document.getElementById('popup-text').innerHTML = 'Enter your Full name';
+     document.getElementById('popup').classList.add('active');
+    return;
+  } else if (document.getElementById('email').value === '') {
+     document.getElementById('popup-text').innerHTML = 'Enter your email adress';
+     document.getElementById('popup').classList.add('active');
+    return;
+  } else if (document.getElementById('birth').value === '') {
+     document.getElementById('popup-text').innerHTML = 'Enter your date of birth';
+     document.getElementById('popup').classList.add('active');
+    return;
+  } else if (document.getElementById('school').value === '') {
+     document.getElementById('popup-text').innerHTML = 'Enter your High school';
+     document.getElementById('popup').classList.add('active');
+    return;
+  } else if (document.getElementById('con').textContent === 'Select Country') {
+     document.getElementById('popup-text').innerHTML = 'Enter your Country';
+     document.getElementById('popup').classList.add('active');
+    return;
+  } 
+  else if (!selectedGrade) {
+     document.getElementById('popup-text').innerHTML = 'Enter your Grade';
+     document.getElementById('popup').classList.add('active');
+    return;
+  } else if (selectedValues.length === 0) {
+     document.getElementById('popup-text').innerHTML = 'Enter how did you hear about us';
+     document.getElementById('popup').classList.add('active');
+    return;
+  } else{
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const selectedValues = [];
+    checkboxes.forEach((checkbox) => {
+      selectedValues.push(checkbox.id);
+    });
+
+    const optionsList = document.querySelector('.options-list');
+    const selectedOption = [...optionsList.children].find((option) => option.classList.contains('selected'));
+    const selectedGrade = selectedOption? selectedOption.getAttribute('data-value') : null;
+    let userID = Math.random().toString(36).substr(2, 9);
+       // Send data to database
+       set(ref(db, 'users/' + userID), {
+           name: document.getElementById('name').value,
+           email: document.getElementById('email').value,
+           birth: document.getElementById('birth').value,
+           school: document.getElementById('school').value,
+           country: document.getElementById('con').textContent,
+           grade: selectedGrade,
+           hear: selectedValues,
+           ambassador: document.getElementById('ambassador').value,
+           other: document.getElementById('other').value
+          });
+          document.getElementById('popup-text').innerHTML = 'Thanks, for submitting!';
+          document.getElementById('popup-link').innerHTML = 'Back to competition page';
+          document.getElementById('popup-link').href = 'competition.html';
+          document.getElementById('popup').classList.add('active');
+     }
+      })
+
+
+      </script>
+   </body>
+</html> 

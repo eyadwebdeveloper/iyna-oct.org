@@ -1,0 +1,83 @@
+.popup-container {          
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.711);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    pointer-events: none;
+    z-index: 99999999999;
+    transition: 2s ease-in-out;
+    
+  }
+  .popup-container.active {
+    pointer-events: auto;
+    display: flex;
+
+  }
+  .popup-container .popup-box {
+    width: 650px;
+    background: #000;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    padding: 30px;
+    transform: scale(0);
+    transition: 2s ease-in-out;
+  
+  }
+  .popup-container.active .popup-box {
+    transform: scale(1);
+    transition-delay: .25s;
+  }
+  .popup-box h2 {
+    color: #e1e0e0;
+    line-height: 1;
+    text-align: left;
+    font-size: 35px;
+  }
+  .popup-box p {
+    color: #e1e0e0;
+    margin: 12px 0 20px;
+  }
+  .links{
+    display: flex;
+    justify-content: center;
+  }
+
+  .popup-box a {
+    text-decoration: none;
+    width: 245px;
+    padding: 10px;
+    text-align: center;
+    background: none;
+    border-radius: 6px;
+    border: 3px solid purple;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 18px;
+    color: #e1e0e0;
+    font-weight: 500;
+  }
+  .popup-box a:hover{
+    background: purple;
+  }
+  .popup-box .close-btn{
+    font-family: Comic sans MS, sans-serif;
+    color: #fff;
+    right: 0;
+    font-size: 25px;
+    margin-left: 95%;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+  }
+  .popup-container hr{
+    border: 1px solid #000;
+    margin-bottom: 30px;
+  }

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="IYNA October Chapter issues with 10+ articles per issue seeking to increase and develop our knowledge in neuroscience.">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/logos/LOGO9.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/0d89f9ac34.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/issues.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <title>IYNA | Issues</title>
+  </head>
+  <body>
+
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <nav class="nav head_container">
+         <div class="nav__data">
+            <a href="#" class="nav__logo">
+              <img src="imgs/LOGO2.png" alt="">
+            </a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li><a href="index.html" class="nav__link">Home</a></li>
+
+               <li><a href="issues.html" class="nav__link active">Issues</a></li>
+
+               <li><a href="courses.html" class="nav__link">Courses</a></li>
+
+               <li><a href="competition.html" class="nav__link">Competition</a></li>
+
+               <li><a href="contact.html" class="nav__link">Contact</a></li>
+
+               <li><a href="publish.html" class="nav__link">Publish</a></li>
+            </ul>
+         </div>
+      </nav>
+   </header>
+    <div id="container">
+      <section class="issues">
+        <div id="typedtext" style="margin-left: 80px;"></div>
+      </section>
+      <section class="season_1">
+        <p>Season 1</p>
+        <div class="issues_season1">
+          <ul>
+            <li>
+              <a href="issue_1.html"><img src="imgs/issue_1.jpg" alt="Fr" /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+  
+        <h3>IYNA<span>October</span></h3>
+  
+        <p class="footer-links">
+          <a href="index.html" class="link-1">Home</a>
+          
+          <a href="courses.html">Courses</a>
+        
+          <a href="issues.html">Issues</a>
+        
+          <a href="#contact">Contact</a>
+          
+        </p>
+  
+        <p class="footer-company-name"><i class="fa-regular fa-copyright"></i> 2020-2024 IYNA October chapter | All Rights Reserved.</p>
+      </div>
+  
+      <div class="footer-center">
+  
+        <div>
+          <i class="fa-solid fa-map-location-dot"></i>
+          <p><span>6th of October</span> Giza, Egypt</p>
+        </div>
+  
+        <div>
+          <i class="fa fa-phone"></i>
+          <a href="Tel:+201102432367"><p>+20 1102432367</p></a>
+        </div>
+  
+        <div>
+          <i class="fa-solid fa-envelope-open-text"></i>
+          <p><a href="mailto:iynaoctoberchapter12@gmail.com">iynaoctoberchapter12@gmail.com</a></p>
+        </div>
+  
+      </div>
+  
+      <div class="footer-right">
+  
+        <p class="footer-company-about">
+          <span>About the Chapter</span>
+          Passionate young neuroscientists are dedicated to aiding the next generation in understanding neuroscience through events, websites, sessions, and research papers.
+        </p>
+  
+        <div class="footer-icons">
+  
+  
+          <a href="https://www.facebook.com/iynaoctoberchapter?mibextid=kFxxJD" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/iyna.october?igsh=MWZkY3UzamZrOW5xZQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/iyna-october-chapter/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/eyadwebdeveloper" target="_blank"><i class="fa-brands fa-github"></i></a>
+  
+        </div>
+  
+      </div><br><br>
+      <a href="Tel:+201111605702" style="text-decoration: none;"><p style="color: white;text-align: center;"><span style="margin-right: 10px;">Website Manager: Eyad Ashraf</span><i class="fa fa-phone"></i><span style="margin-left: 5px;">+201111605702</span></p></a>
+  
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        let query = window.matchMedia("(max-width:1110px)");
+if(query.matches){
+    (function($) {
+        var slide = function(ele,options) {
+            var $ele = $(ele);
+            var setting = {
+                speed: 800,
+                interval: 3000,
+                
+            };
+            $.extend(true, setting, options);
+            var states = [
+                { $zIndex: 15, width: 150, height: 199, top: 0, left: 0, $opacity: 1 },
+                { $zIndex: 14, width: 130, height: 170, top: 15, left: 110, $opacity: 0.9 },
+                { $zIndex: 13, width: 0, height: 0, top: 100, left: 200, $opacity: 0.9 }
+            ];
+    
+            var $lis = $ele.find('li');
+            var timer = null;
+    
+            // 事件
+            $ele.find('.hi-next').on('click', function() {
+                next();
+            });
+            $ele.find('.hi-prev').on('click', function() {
+                states.push(states.shift());
+                move();
+            });
+            $ele.on('mouseover', function() {
+                clearInterval(timer);
+                timer = null;
+            }).on('mouseout', function() {
+                autoPlay();
+            });
+    
+            move();
+            autoPlay();
+            function move() {
+                $lis.each(function(index, element) {
+                    var state = states[index];
+                    $(element).css('zIndex', state.$zIndex).finish().animate(state, setting.speed).find('img').css('opacity', state.$opacity);
+                });
+            }
+            function next() {
+                states.unshift(states.pop());
+                move();
+            }
+    
+            function autoPlay() {
+                timer = setInterval(next, setting.interval);
+            }
+        }
+        $.fn.hiSlide = function(options) {
+            $(this).each(function(index, ele) {
+                slide(ele,options);
+            });
+            return this;
+        }
+    })(jQuery);
+    
+}else{
+    (function($) {
+        var slide = function(ele,options) {
+            var $ele = $(ele);
+            var setting = {
+                speed: 800,
+                interval: 3000,
+                
+            };
+            $.extend(true, setting, options);
+            var states = [
+                { $zIndex: 15, width: 250, height: 332, top: 0, left: 0, $opacity: 1 },
+                { $zIndex: 14, width: 203, height: 267, top: 32, left: 125, $opacity: 0.9 },
+                { $zIndex: 13, width: 145, height: 193, top: 64, left: 260, $opacity: 0.9 }
+            ];
+    
+            var $lis = $ele.find('li');
+            var timer = null;
+    
+            // 事件
+            $ele.find('.hi-next').on('click', function() {
+                next();
+            });
+            $ele.find('.hi-prev').on('click', function() {
+                states.push(states.shift());
+                move();
+            });
+            $ele.on('mouseenter', function() {
+                clearInterval(timer);
+                timer = null;
+            }).on('mouseleave', function() {
+                autoPlay();
+            });
+    
+            move();
+            autoPlay();
+            function move() {
+                $lis.each(function(index, element) {
+                    var state = states[index];
+                    $(element).css('zIndex', state.$zIndex).finish().animate(state, setting.speed).find('img').css('opacity', state.$opacity);
+                });
+            }
+            function next() {
+                states.unshift(states.pop());
+                move();
+            }
+    
+            function autoPlay() {
+                timer = setInterval(next, setting.interval);
+            }
+        }
+        $.fn.hiSlide = function(options) {
+            $(this).each(function(index, ele) {
+                slide(ele,options);
+            });
+            return this;
+        }
+    })(jQuery);
+    
+}
+
+    // set up text to print, each item in array is new line
+    var aText = new Array(
+        "Discover",
+        "the latest",
+        "issues",
+        ""
+        );
+        // Array.style.color = "#ff0000";
+        var iSpeed = 150; // time delay of print out
+        var iIndex = 0; // start printing array at this posision
+        var iArrLength = aText[0].length; // the length of the text array
+        var iScrollAt = 20; // start scrolling up at this many lines
+         
+        var iTextPos = 0; // initialise text position
+        var sContents = ''; // initialise contents variable
+        var iRow; // initialise current row
+         
+        function typewriter()
+        {
+         sContents =  ' ';
+         iRow = Math.max(0, iIndex-iScrollAt);
+         var destination = document.getElementById("typedtext");
+         
+         while ( iRow < iIndex ) {
+          sContents += aText[iRow++] + '<br />'+ '<span>';
+         }
+         destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+         if ( iTextPos++ == iArrLength ) {
+          iTextPos = 0;
+          iIndex++;
+          if ( iIndex != aText.length ) {
+           iArrLength = aText[iIndex].length;
+           setTimeout("typewriter()",200);
+          }
+         } else {
+          setTimeout("typewriter()", iSpeed);
+         }
+        }
+        
+        
+        window.addEventListener("load", function(){
+            typewriter();
+        });    
+    </script>
+  </body>
+</html>

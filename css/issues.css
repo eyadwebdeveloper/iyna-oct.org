@@ -1,0 +1,111 @@
+.issues_head .nav_but a:nth-child(2):after {
+    width: 100%;
+  }
+  .issues {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20% 0;
+  }
+  .issues .hi-slide {
+    width: 405px;
+    height: 332px;
+    margin: 0;
+  }
+  .issues .hi-slide > ul {
+    list-style: none;
+    position: relative;
+    width: 405px;
+    height: 332px;
+    overflow: visible;
+  }
+  .issues .hi-slide > ul > li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    box-shadow: -50px 0px 150px #843fc441;
+    border-radius: px;
+  }
+  
+  .season_1 p {
+    font: var(--font-weight-extrabold) 36pt inter;
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .issues_season1 > ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  .issues_season1 > ul > li {
+    padding: 0 20px 50px;
+  }
+  .issues_season1 > ul > li > img {
+    border-radius: 10px;
+  }
+  
+  /* new */
+  .issues_season1 ul li img {
+    border-radius: 10px;
+  }
+  /* end new */
+  
+  @media only screen and (max-width: 1110px) {
+    .issues .hi-slide {
+      width: 240px;
+      height: 199px;
+    }
+    .issues .hi-slide > ul {
+      width: 240px;
+      height: 199px;
+    }
+    .issues_season1 > ul > li > img {
+      width: 250px;
+      height: 327px;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .issues {
+      flex-direction: column;
+    }
+    .issues .hi-slide {
+      width: 228px;
+      height: 199px;
+    }
+    */ .issues .hi-slide > ul {
+      width: 228px;
+      height: 199px;
+    }
+    .issues_season1 > ul > li > img {
+      width: 250px;
+      height: 327px;
+    }
+    .season_1 p {
+      font: var(--font-weight-extrabold) 24pt inter;
+      color: var(--white-color);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .issues_season1 > ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .issues_season1 > ul > li > img {
+      width: 150px;
+      height: 196px;
+    }
+  }
+  
+  /* ======================== */
+  
+  #container {
+      padding: 0px 15%;
+  }
+  
+  section {
+      padding: 0 0 10rem;
+  }
