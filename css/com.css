@@ -997,66 +997,7 @@ body {
       height: 196px;
     }
   }
-  /* ======================== Apply ===================== */
-.apply{
-    padding: 50px;
-  }
-  .apply-container{
-    background: #000;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 800px;
-    margin: auto;
-    padding: 30px;
-  }
-  .apply-container h2{
-    font-size: 40px;
-    color: #fff;
-  }
-  .apply-container p{
-    color: #252525;
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
   
-  .apply .row{
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-  }
-  .apply input, select, textarea{
-    background: none;
-    outline: none;
-    border: none;
-    margin: 20px;
-    font-size: 20px;
-    border-bottom: 2px solid gray;
-    padding: 10px;
-    color: #fff;
-  }
-  textarea{
-    resize: vertical;
-    width: 100%;
-  }
-
-  .apply input:focus, select:focus, textarea:focus{
-    border-color: #fff;
-  }
-  select option{
-    color: #000;
-  }
-  .apply .submit{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .submit button{
-    font-size: 20px;
-    cursor: pointer;
-  }
   .btn{
     background: purple;
     border: 2px solid purple;
@@ -1528,3 +1469,76 @@ input:checked + label .description {
 
 }
 
+
+.time-text{
+  font-size: 1.05rem;
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+.timeline{
+  padding: 5rem 0 2.5rem 0;
+  margin-bottom: 350px;
+}
+.timeline > .time-text{
+  width: 70%;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+.timeline .time-item{
+  padding: 0 2.5rem;
+  margin: 2rem;
+  border-left: 2px solid purple;
+  position: relative;
+  background: #2d2d2d;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+.timeline .time-item > span{
+  background: #878686;
+  border-radius: 15px;
+  padding: 0.25rem 0.7rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+.timeline .time-item h2{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 18px;
+
+}
+.timeline .time-item h2 span{
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+.timeline .time-item .text{
+  font-size: 1rem;
+  padding-bottom: 0;
+}
+.timeline .time-icon{
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: purple;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -25px;
+}
+
+.timeline .time-row{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.item-row .time-col{
+  display: flex;
+  flex-direction: column;
+}
