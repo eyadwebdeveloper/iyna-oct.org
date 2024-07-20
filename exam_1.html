@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://kit.fontawesome.com/0d89f9ac34.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/jpg" href="imgs/favicon.png"/>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/portal.css">
@@ -19,7 +20,7 @@
       }
     </style>
 
-    <title>IYNA | Exam 1</title>
+    <title>Exam #1 | BrainBlitz</title>
   </head>
   <body>
      <!-- START AD | Eyad Ashraf -->
@@ -223,7 +224,7 @@
                        <label for="q11a2">Extropia</label>
                        <input type="radio" name="q11" id="q11a3" />
                        <label for="q11a3">Amblyopic</label>
-                       <input type="radio" name="q11" id="q11a4"checked />
+                       <input type="radio" name="q11" id="q11a4" />
                        <label for="q11a4">Cataract</label>
                      </div>
                  </div>
@@ -238,7 +239,7 @@
                        <label for="q12a2">Hyperpolarization of the synaptic terminal</label>
                        <input type="radio" name="q12" id="q12a3" />
                        <label for="q12a3">Opening of ligand-gated ion calcium channels</label>
-                       <input type="radio" name="q12" id="q12a4"checked />
+                       <input type="radio" name="q12" id="q12a4" />
                        <label for="q12a4">Influx of calcium into the presynaptic terminal</label>
                      </div>
                  </div>
@@ -252,7 +253,7 @@
                        <label for="q13a2">Serotonin</label>
                        <input type="radio" name="q13" id="q13a3" />
                        <label for="q13a3">Potassium ions</label>
-                       <input type="radio" name="q13" id="q13a4" checked/>
+                       <input type="radio" name="q13" id="q13a4" />
                        <label for="q13a4">Prostaglandins</label>
                      </div>
                  </div>
@@ -370,7 +371,7 @@
                        <label for="q20a2">both A and D</label>
                        <input type="radio" name="q20" id="q20a3" />
                        <label for="q20a3">only C</label>
-                       <input type="radio" name="q20" id="q20a4" />
+                       <input type="radio" name="q20" id="q20a4"/>
                        <label for="q20a4">both C and E</label>
                      </div>
                  </div>
@@ -647,20 +648,13 @@
  const app = initializeApp(firebaseConfig);
  const db = getDatabase(app);
 
- 
-
-
-  
-
 // // START AD | EYAD ASHRAF
 const popupContainer = document.querySelector('.popup-container');
 const closeBtn = document.querySelector('.close-btn');
 closeBtn.onclick = () => {
     popupContainer.classList.remove('active');
+    location.reload();
 }
-
-   
-
 
 const form = document.querySelector('form');
 const nameInput = document.querySelector('#name');
@@ -744,25 +738,7 @@ form.addEventListener('submit', (e) => {
     document.getElementById('popup').classList.add('active');
     score = 0;
   }
-
-  
- 
-});
-
-
-
-    
-        
-    
-        
-
-      
+});   
     </script>
-    
-    
-      
-
- 
-
   </body>
 </html>
