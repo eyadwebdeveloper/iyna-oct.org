@@ -3,8 +3,14 @@
 section{
     margin-top: 200px;
 }
+body{
+  background: url('../lower_background_LP.jpg');
+}
 h1{
     color: #fff;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 h2{
     color: #fff;
