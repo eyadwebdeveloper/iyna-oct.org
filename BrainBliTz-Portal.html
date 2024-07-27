@@ -4,12 +4,11 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+      <meta name="keywords" content="BrainBlitz apply, join Brainblitz, BRAINBLITZ application, brainblitz portal, portal, Application portal">
+      <meta name="description" content="Brain Blitz application portal">
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-      <meta name="keywords" content="BrainBlitz apply, join Brainblitz, BRAINBLITZ application, brainblitz portal, portal, Application portal">
-      <meta name="description" content="Brain Blitz application portal">
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="css/header.css">
@@ -30,6 +29,14 @@
           </div>
       </div>
     </div>
+    <div class="popup-container" id="loading" style="background: #000;">
+      <div class="popup-box">
+        <div class="loader">Loading
+          <span></span>
+        </div>
+      </div>
+    </div>
+    
       <!--=============== HEADER ===============-->
       <header class="header">
          <nav class="nav head_container">
@@ -66,7 +73,6 @@
         <section class="wrap hero">
           <h1>Welcome to the application portal</h1>
           <hr>
-<!--           <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, amet.</h3> -->
        </section>
        <section class="wrap questions">
           <form action="">
@@ -255,6 +261,69 @@
           </form>
        </section>
       </div>
+      <footer class="footer-distributed">
+
+        <div class="footer-left">
+    
+          <h3>IYNA<span>October</span></h3>
+    
+          <p class="footer-links">
+            
+            <a href="index.html" class="link-1">Home</a>
+  
+            <a href="issues.html">Issues</a>
+            
+            <a href="courses.html">Courses</a>
+          
+            <a href="contact.html">Contact</a>
+  
+            <a href="publish.html">Publish</a>
+            
+          </p>
+    
+          <p class="footer-company-name"><i class="fa-regular fa-copyright"></i> 2020-2024 IYNA October chapter | All Rights Reserved.</p>
+        </div>
+    
+        <div class="footer-center">
+    
+          <div>
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p><span>6th of October</span> Giza, Egypt</p>
+          </div>
+    
+          <div>
+            <i class="fa fa-phone"></i>
+            <a href="Tel:+201102432367"><p>+20 1102432367</p></a>
+          </div>
+    
+          <div>
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <p><a href="mailto:iynaoctoberchapter12@gmail.com">iynaoctoberchapter12@gmail.com</a></p>
+          </div>
+    
+        </div>
+    
+        <div class="footer-right">
+    
+          <p class="footer-company-about">
+            <span>About the Chapter</span>
+            Passionate young neuroscientists are dedicated to aiding the next generation in understanding neuroscience through events, websites, sessions, and research papers.
+          </p>
+    
+          <div class="footer-icons">
+    
+    
+            <a href="https://www.facebook.com/iynaoctoberchapter?mibextid=kFxxJD" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/iyna.october?igsh=MWZkY3UzamZrOW5xZQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/iyna-october-chapter/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/eyadwebdeveloper" target="_blank"><i class="fa-brands fa-github"></i></a>
+    
+          </div>
+    
+        </div><br><br>
+        <a href="Tel:+201111605702" style="text-decoration: none;"><p style="color: white;text-align: center;"><span style="margin-right: 10px;">Website Manager: Eyad Ashraf</span><i class="fa fa-phone"></i><span style="margin-left: 5px;">+201111605702</span></p></a>
+    
+      </footer>
       <!--=============== MAIN JS ===============-->
       <script src="js/header.js"></script>
       <script src="js/portal.js"></script>
@@ -347,8 +416,12 @@ if (document.getElementById('name').value === '') {
            ambassador: document.getElementById('ambassador').value,
            other: document.getElementById('other').value
           });
-          location.href ='submitted.html';
-
+          document.body.style.overflow = 'hidden';
+          document.getElementById('loading').classList.add('active');
+          setTimeout(function() {
+            location.href = 'submitted.html'
+          }, 3000);
+          
      }
       })
 
