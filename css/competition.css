@@ -496,7 +496,10 @@ body {
 #typedtext span > span {
   color: var(--first-color-plate);
 }
-
+@media only screen and (max-width: 440px){
+   #typedtext{
+  padding-left: 20px;
+}
 
 
 
