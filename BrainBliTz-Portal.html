@@ -347,10 +347,8 @@ if (document.getElementById('name').value === '') {
            ambassador: document.getElementById('ambassador').value,
            other: document.getElementById('other').value
           });
-          document.getElementById('popup-text').innerHTML = 'Thanks, for submitting!';
-          document.getElementById('popup-link').innerHTML = 'Back to competition page';
-          document.getElementById('popup-link').href = 'competition.html';
-          document.getElementById('popup').classList.add('active');
+          location.href ='submitted.html';
+
      }
       })
 
