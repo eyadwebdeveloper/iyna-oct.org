@@ -1,4 +1,6 @@
-
+.reqiuered{
+  color: red;
+}
 .loader {
   position: absolute;
   top: 50%;
