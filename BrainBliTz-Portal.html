@@ -77,24 +77,24 @@
        <section class="wrap questions">
           <form action="">
              <div class="q">
-                <label for="name">Your full name</label>
+                <label for="name">Your full name<span class="reqiuered">*</span></label>
              <input name="Full Name" id="name" type="text" required/>
            </div>
            <div class="q">
-             <label for="email">Your Email adress</label>
+             <label for="email">Your Email adress<span class="reqiuered">*</span></label>
              <input name="email" id="email" type="email" required/>
            </div>
            <div class="q">
-             <label for="birth">Your Date of birth</label>
+             <label for="birth">Your Date of birth<span class="reqiuered">*</span></label>
              <input name="birth" id="birth" type="date" required/>
            </div>
            <div class="q">
-             <label for="school">High School</label>
+             <label for="school">Your High School<span class="reqiuered">*</span></label>
              <input name="school" id="school" type="text" required/>
            </div>
            
            <div class="q">
-             <label for="country">Your country</label>
+             <label for="country">Your country<span class="reqiuered">*</span></label>
              <div class="wrapper" id="country">
                 <div class="select-btn">
                   <span id="con">Select Country</span>
@@ -110,7 +110,7 @@
               </div>
            </div>
            <div class="q" style="margin-bottom: 0;">
-             <label for="select" class="label">Your Grade</label>
+             <label for="select" class="label">Your Grade<span class="reqiuered">*</span></label>
              <div class="select-menu q" style="margin-top: 5px;">
                <div class="select" id="select">
                  <span>Select Grade</span>
@@ -128,7 +128,7 @@
              </div>
            </div>
            <div class="q finishh">
-             <label for="">From where did you hear about the competition?</label>
+             <label for="">From where did you hear about the competition?<span class="reqiuered">*</span></label>
              <div class="cols">
                <div class="col">
                  <div class="form-group un-re">
@@ -244,12 +244,12 @@
                </div>
              </div>
            </div>
-           <div class="q">
-             <label for="ambassador">If you have chosen an ambassador, enter the ambassador's code (optional)</label>
+           <div class="q" id="ambassador-q">
+            <label for="ambassador">You have chosen an ambassador, Please enter the ambassador's code</label>
              <input type="text" name="ambassador" id="ambassador">
            </div>
-           <div class="q">
-             <label for="other">If you have chosen other, please specify</label>
+           <div class="q" id="other-q">
+            <label for="other">You have chosen other, Please specify</label>
              <input type="text" name="other" id="other">
            </div>
            <div class="finish">
@@ -404,6 +404,16 @@ if (document.getElementById('name').value === '') {
     const selectedOption = [...optionsList.children].find((option) => option.classList.contains('selected'));
     const selectedGrade = selectedOption? selectedOption.getAttribute('data-value') : null;
     let userID = Math.random().toString(36).substr(2, 9);
+    let currentDate = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    });
+    let currentTime = new Date().toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
        // Send data to database
        set(ref(db, 'users/' + userID), {
            name: document.getElementById('name').value,
@@ -414,7 +424,9 @@ if (document.getElementById('name').value === '') {
            grade: selectedGrade,
            hear: selectedValues,
            ambassador: document.getElementById('ambassador').value,
-           other: document.getElementById('other').value
+           other: document.getElementById('other').value,
+           date: currentDate,
+           time: currentTime
           });
           document.body.style.overflow = 'hidden';
           document.getElementById('loading').classList.add('active');
@@ -424,8 +436,9 @@ if (document.getElementById('name').value === '') {
           
      }
       })
-
+      
 
       </script>
+    
    </body>
 </html> 
