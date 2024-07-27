@@ -17,6 +17,7 @@
  .hero h1{
    font-size: 40px;
    color: #fff;
+   text-align: center;
  }
  .hero h3{
    color: gray;
