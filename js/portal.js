@@ -1,3 +1,29 @@
+const otherCheck = document.getElementById('Other');
+const otherQ = document.getElementById('other-q');
+otherQ.style.display = 'none';
+
+otherCheck.addEventListener('change', () => {
+	if (otherCheck.checked) {
+	  otherQ.style.display = 'flex';
+	} else {
+	  otherQ.style.display = 'none';
+	}
+  });
+
+
+const AmbasCheck = document.getElementById('Ambassador');
+const AmbasQ = document.getElementById('ambassador-q');
+AmbasQ.style.display = 'none';
+
+AmbasCheck.addEventListener('change', () => {
+  if (AmbasCheck.checked) {
+    AmbasQ.style.display = 'flex';
+  } else {
+    AmbasQ.style.display = 'none';
+  }
+});
+
+
 const popupContainer = document.querySelector('.popup-container');
 const closeBtn = document.querySelector('.close-btn');
 closeBtn.onclick = () => {
@@ -314,12 +340,3 @@ const select = document.querySelector(".select");
       });
     });
     const selectedOption = document.querySelector(".option.selected");
-
-
-
-    
-
-
-
-
-
