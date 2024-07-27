@@ -81,7 +81,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 30px;
@@ -92,13 +92,14 @@
   flex-direction: column;
   padding: 50px;
   border-radius: 20px;
-  width: 100%;
+  width: 75%;
   margin-bottom: 50px;
   background-color: rgba(0,0,0,.7);
  }
  @media only screen and (max-width: 750px){
-  .wraps{
-    width: 80%;
+  .wrap{
+    width: 100%;
+    padding: 30px;
   }
  }
 
