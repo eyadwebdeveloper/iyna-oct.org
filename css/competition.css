@@ -44,9 +44,10 @@
     font-size: 45px;
     text-align: center;
     font-family: Comic sans MS;
+    width: 85%;
+    margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-
   }
   
   
@@ -482,21 +483,6 @@ body {
 .com-body{
   background: #000 url('../imgs/last-over.png'); 
 }
-#typedtext {
-  padding-top: 200px;
-  padding-left: 100px;
-  margin-bottom: 35px;
-  color: var(--white-color);
-  font: var(--font-weight-extrabold) 46pt var(--inter-font-family);
-  height: 60%;
-  overflow: hidden;
-  cursor: default;
-}
-
-#typedtext span > span {
-  color: var(--first-color-plate);
-}
-
 
 
 
