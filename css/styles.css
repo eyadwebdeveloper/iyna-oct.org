@@ -228,6 +228,19 @@ section {
 #typedtext span > span {
   color: var(--first-color-plate);
 }
+.buta{
+  position: absolute;
+  top: 500px;
+  left: 100px;
+}
+@media only screen and (max-width: 400px){
+  #typedtext {
+    padding-left: 40px;
+  }
+  .buta{
+    left: 40px;
+  }
+}
 
 #browse_issues_butt {
   font: var(--font-weight-bold) 14pt var(--inter-font-family);
@@ -252,6 +265,7 @@ section {
   box-shadow: 0 0 35px var(--first-color-plate);
   animation: none;
 }
+
 .intro_sec {
   margin: 0 auto;
   /* width: 60%; */
