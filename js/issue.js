@@ -119,7 +119,7 @@ $(function () {
     $(".copy-section-link").on("click", function () {
       sectionHref = $(this).attr("section-href");
       sectionHref = sectionHref.split(".");
-      navigator.clipboard.writeText(`www.iyna-oct.site/issues/${sectionHref[0]}/?article=${parseInt(sectionHref[1]) - 1}`);
+      navigator.clipboard.writeText(`https://www.iyna-oct.site/issue_1#articles?article=${parseInt(sectionHref[1]) - 1}`);
   
       const toast = new bootstrap.Toast(document.getElementById("copied-toast"));
       toast.show();
