@@ -1,0 +1,35 @@
+*{
+    color: #fff;
+}
+section{
+    margin-top: 150px;
+}
+.rules-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    background: #000;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.rules-container p.center{
+    font-size: 22px;
+    margin-top: 30px;
+}
+p.center i{
+    color: red;
+}
+.rules-container .rule-card{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+    width: 300px;
+}
+.rule-card h2{
+    font-size: 43px;
+    margin-bottom: 10px;
+}
+.rule-card p{
+    font-size: 19px;
+}
