@@ -1348,6 +1348,8 @@ body {
     color: white;
     display: flex;
     flex-wrap: nowrap;
+    height: 100%;
+    padding-top: 260px;
 }
 
 .card > .row > .icon {
@@ -1358,15 +1360,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     margin: 15px;
     height: 50px;
+    transform: translateY(30px);
+    transition: .5s ease-in-out;
 }
 
 
 .card > .row > .description {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     overflow: hidden;
     width: 540px;
@@ -1374,10 +1376,11 @@ body {
     transform: translateY(30px);
     transition-delay: .3s;
     transition: all .3s ease;
+    align-items: center;
 }
 @media screen and (max-width: 780px){
   .card > .row > .description{
-    width: 80%;
+    width: 90%;
 
   }
 }
@@ -1391,8 +1394,11 @@ input:checked + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
-.description h4 {
+.description span {
     text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 input {
@@ -1406,6 +1412,10 @@ input:checked + label {
 input:checked + label .description {
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+input:checked + label .icon {
+  opacity: 1 !important;
+  transform: translateY(-22px) !important;
 }
 
 .card[for="c1"] {
@@ -1432,8 +1442,15 @@ input:checked + label .description {
     width: 100%;
     margin: auto;
   }
+  .card > .row {
+    padding-top: 375px;
+}
+.card > .row > .icon {
+  transform: translateY(-75px);
+}
   input:checked + label {
     height: 500px;
+    width: 100%;
 }
 }
 @media only screen and (max-width: 1060px){
@@ -1443,6 +1460,27 @@ input:checked + label .description {
     margin-right: 5%;
 
   }
+
+}
+.respo-container{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  background: #000;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.respo-container .respo-card{
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
+  width: 300px;
+}
+.respo-card h2{
+  font-size: 43px;
+  margin-bottom: 10px;
 }
 .card .row .icon.un .description {
   display: none;
