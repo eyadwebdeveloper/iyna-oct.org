@@ -192,6 +192,16 @@
                         <a href="https://wa.link/oct7k7" title="whatsapp" target="_blank" class="whats"><i class="fa-brands fa-whatsapp"></i></a>
                       </div>
                   </div>
+                  <div class="team-mem">
+                    <img src="imgs/omar-ammar.png">
+                    <h4>Mohamed Mashour</h4>
+                    <p>Former-President</p>
+                    <div class="social-links">
+                      <a href="https://www.facebook.com/profile.php?id=100008599171572" title="Facebook" target="_blank" class="fac"><i class="fa fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/mohamedmashhour1/" title="instagram" target="_blank" class="instag"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="https://wa.link/24qtki" title="whatsapp" target="_blank" class="whats"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
                   
               </div>
           
@@ -577,11 +587,13 @@ if(queryTwo.matches){
         };
         
 
-        
+        let loader = document.getElementById('loader');
         window.addEventListener("load", function(){
             typewriter();
+            loader.classList.add('hidden');
         });    
-
+        
+       
 
     </script>
   </body>
