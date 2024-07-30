@@ -16,13 +16,25 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/competition.css">
+    <link rel="stylesheet" href="./css/popup.css">
+    
 
     
 
     <title>Brain Blitz Competition | IYNA</title>
   </head>
   <body>
-
+    <!-- START AD | Eyad Ashraf -->
+    <div class="popup-container" id="popup">
+      <div class="popup-box">
+          <h2 id="popup-text">Exam not open yet</h2>
+          <hr>
+          <div class="links">
+            <a class="close-btn" id="close-popup">Ok</a>
+          </div>
+      </div>
+    </div>
+  <!-- END AD -->
     <!--=============== HEADER ===============-->
     <header class="header">
       <nav class="nav head_container">
@@ -46,7 +58,7 @@
 
                <li><a href="./courses" class="nav__link">Courses</a></li>
 
-               <li><a href="./BrainBliTz" class="nav__link active">Competition</a></li>
+               <li><a href="./competition" class="nav__link active">Competition</a></li>
 
                <li><a href="./contact" class="nav__link">Contact</a></li>
 
@@ -144,8 +156,7 @@
               <div class="row">
                   <div class="icon">1</div>
                   <div class="description">
-                      <h4>Engage and share ideas with like-minded rivals</h4>
-                      <p>Brain Blitz resembles a conference where participants can interact and share ideas with peers worldwide. It introduces you to a supportive community that will play a crucial role in your future endeavors</p>
+                      <p><span>Engage and share ideas with like-minded rivals</span><br> Brain Blitz resembles a conference where participants can interact and share ideas with peers worldwide. It introduces you to a supportive community that will play a crucial role in your future endeavors</p>
                   </div>
               </div>
           </label>
@@ -154,8 +165,7 @@
               <div class="row">
                   <div class="icon">2</div>
                   <div class="description">
-                      <h4>Stand out among elite students</h4>
-                      <p>Brain Blitz offers you the opportunity to showcase your skills and excel in a community of talented contestants. Such a competitive community is an ideal environment to grow and develop.</p>
+                      <p><span>Stand out among elite students</span><br> Brain Blitz offers you the opportunity to showcase your skills and excel in a community of talented contestants. Such a competitive community is an ideal environment to grow and develop.</p>
                   </div>
               </div>
           </label>
@@ -164,8 +174,7 @@
               <div class="row">
                   <div class="icon">3</div>
                   <div class="description">
-                      <h4>Obtain medals and certificates</h4>
-                      <p>All participants in the first stage will obtain participation certificates in recognition of their efforts. Gold, silver, and bronze honors are awarded to finalists based on their performance.</p>
+                      <p><span>Obtain medals and certificates</span><br> All participants in the first stage will obtain participation certificates in recognition of their efforts. Gold, silver, and bronze honors are awarded to finalists based on their performance.</p>
                   </div>
               </div>
           </label>
@@ -174,8 +183,7 @@
               <div class="row">
                   <div class="icon un">4</div>
                   <div class="description">
-                      <h4>Gain profound knowledge in neuroscience</h4>
-                      <p>IYNA OCT offers a neuroscience program, giving students access to inclusive materials, and preparing them for the competition. This training program helps students develop a comprehensive understanding of key neuroscience concepts.</p>
+                      <p><span>Gain profound knowledge in neuroscience</span><br> IYNA OCT offers a neuroscience program, giving students access to inclusive materials, and preparing them for the competition. This training program helps students develop a comprehensive understanding of key neuroscience concepts.</p>
                   </div>
               </div>
           </label>
@@ -272,9 +280,9 @@
             <img src="imgs/exam-2.png" alt="image" class="card__img">
 
             <div class="card__data">
-               <span class="card__description">00 questions</span>
+               <span class="card__description">?? questions</span>
                <h2 class="card__title">The Second exam</h2>
-               <a href="./not-exam" class="card__button">Not open yet</a>
+               <a id="exam2" class="card__button">Not open yet</a>
             </div>
          </article>
 
@@ -282,9 +290,9 @@
             <img src="imgs/exam-3.png" alt="image" class="card__img">
 
             <div class="card__data">
-               <span class="card__description">00 questions</span>
+               <span class="card__description">?? questions</span>
                <h2 class="card__title">The third exam</h2>
-               <a href="./not-exam" class="card__button">Not open yet</a>
+               <a id="exam3" class="card__button">Not open yet</a>
             </div>
          </article>
       </div>
@@ -360,6 +368,19 @@
     </footer>
     <script src="js/com.js"></script>
     <script>
+      const popupContainer = document.getElementById('popup');
+      const closeBtn = document.getElementById('close-popup');
+      closeBtn.onclick = () => {
+          popupContainer.classList.remove('active');
+      }
+
+      document.getElementById('exam2').addEventListener('click', ()=>{
+        popupContainer.classList.add('active');
+      })
+      document.getElementById('exam3').addEventListener('click', ()=>{
+        popupContainer.classList.add('active');
+      })
+
       const buttons = document.querySelectorAll('.accordions-container button');
 
 buttons.forEach( button =>{
