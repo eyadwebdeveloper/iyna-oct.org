@@ -421,7 +421,6 @@ let currentTime = new Date().toLocaleTimeString('en-US', {
 });
 
 // Send data to database
-let user = currentDate + currentTime;
 set(ref(db, 'bytime/' + user), {
   name: document.getElementById('name').value,
   email: document.getElementById('email').value,
@@ -436,10 +435,7 @@ set(ref(db, 'bytime/' + user), {
   time: currentTime
 });
 
-// Increment user count
-ref(db, 'users/count').transaction(count => {
-  return (count || 0) + 1;
-});
+
 
 document.body.style.overflow = 'hidden';
 document.getElementById('loading').classList.add('active');
