@@ -335,7 +335,7 @@
       <script type="module">
        // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
+  import { getFirestore, doc, setDoc, collection } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -354,10 +354,10 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
+  const db = getFirestore(app);
 
 
-  document.getElementById('submit').addEventListener('click', function(e){
+  document.getElementById('submit').addEventListener('click', (e)=>{
     e.preventDefault();
     // validiation
     const optionsList = document.querySelector('.options-list');
@@ -419,28 +419,44 @@ let currentTime = new Date().toLocaleTimeString('en-US', {
   minute: '2-digit',
   second: '2-digit'
 });
-// Send data to database
-set(ref(db, 'users/' + document.getElementById('name').value), {
-  name: document.getElementById('name').value,
-  email: document.getElementById('email').value,
-  birth: document.getElementById('birth').value,
-  school: document.getElementById('school').value,
-  country: document.getElementById('con').textContent,
+
+const name = document.getElementById('name').value;
+const other = document.getElementById('other').value;
+const ambassador = document.getElementById('ambassador').value;
+const country = document.getElementById('con').textContent;
+const school = document.getElementById('school').value;
+const birth = document.getElementById('birth').value;
+const email = document.getElementById('email').value;
+
+
+const usersRef = collection(db, 'competitiors');
+const userRef = doc(usersRef, email);
+setDoc(userRef, {
+  name: name,
+  email: email,
+  birth: birth,
+  school: school,
+  country: country,
   grade: selectedGrade,
   hear: selectedValues,
-  ambassador: document.getElementById('ambassador').value,
-  other: document.getElementById('other').value,
+  ambassador: ambassador,
+  other: other,
   date: currentDate,
   time: currentTime
+})
+.then(() => {
+  document.body.style.overflow = 'hidden';
+document.getElementById('loading').classList.add('active');
+setTimeout(function() {
+  location.href = './submitted'
+}, 3000);
+})
+.catch((error) => {
+  document.getElementById('popup-text').innerHTML = 'Error Submitting:', error;
+  document.getElementById('popup').classList.add('active');
 });
 
 
-
-document.body.style.overflow = 'hidden';
-document.getElementById('loading').classList.add('active');
-setTimeout(function() {
-  location.href = '../submitted'
-}, 3000);
       }})
       
 
