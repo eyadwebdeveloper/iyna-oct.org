@@ -419,9 +419,9 @@ let currentTime = new Date().toLocaleTimeString('en-US', {
   minute: '2-digit',
   second: '2-digit'
 });
-
+let user = Date.now();
 // Send data to database
-set(ref(db, 'bytime/' + user), {
+set(ref(db, 'users/' + user), {
   name: document.getElementById('name').value,
   email: document.getElementById('email').value,
   birth: document.getElementById('birth').value,
