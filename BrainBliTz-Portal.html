@@ -333,133 +333,118 @@
       <script src="js/header.js"></script>
       <script src="js/portal.js"></script>
       <script type="module">
-       // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-  import { getFirestore, doc, setDoc, collection } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCp5YscKqWKU97TU3eq7_xLkapgCTClRlY",
-    authDomain: "iyna-portal.firebaseapp.com",
-    databaseURL: "https://iyna-portal-default-rtdb.firebaseio.com",
-    projectId: "iyna-portal",
-    storageBucket: "iyna-portal.appspot.com",
-    messagingSenderId: "256208881067",
-    appId: "1:256208881067:web:f37186387ac82366003eee",
-    measurementId: "G-8C9VQ9BH0F"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-
-  document.getElementById('submit').addEventListener('click', (e)=>{
-    e.preventDefault();
-    // validiation
-    const optionsList = document.querySelector('.options-list');
-    const selectedOption = [...optionsList.children].find((option) => option.classList.contains('selected'));
-    const selectedGrade = selectedOption? selectedOption.getAttribute('data-value') : null;
-
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    const selectedValues = [];
-    checkboxes.forEach((checkbox) => {
-      selectedValues.push(checkbox.id);
-    });
-
-if (document.getElementById('name').value === '') {
-     document.getElementById('popup-text').innerHTML = 'Enter your Full name';
-     document.getElementById('popup').classList.add('active');
-    return;
-  } else if (document.getElementById('email').value === '') {
-     document.getElementById('popup-text').innerHTML = 'Enter your email adress';
-     document.getElementById('popup').classList.add('active');
-    return;
-  } else if (document.getElementById('birth').value === '') {
-     document.getElementById('popup-text').innerHTML = 'Enter your date of birth';
-     document.getElementById('popup').classList.add('active');
-    return;
-  } else if (document.getElementById('school').value === '') {
-     document.getElementById('popup-text').innerHTML = 'Enter your High school';
-     document.getElementById('popup').classList.add('active');
-    return;
-  } else if (document.getElementById('con').textContent === 'Select Country') {
-     document.getElementById('popup-text').innerHTML = 'Enter your Country';
-     document.getElementById('popup').classList.add('active');
-    return;
-  } 
-  else if (!selectedGrade) {
-     document.getElementById('popup-text').innerHTML = 'Enter your Grade';
-     document.getElementById('popup').classList.add('active');
-    return;
-  } else if (selectedValues.length === 0) {
-     document.getElementById('popup-text').innerHTML = 'Enter how did you hear about us';
-     document.getElementById('popup').classList.add('active');
-    return;
-  } else{
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    const selectedValues = [];
-    checkboxes.forEach((checkbox) => {
-      selectedValues.push(checkbox.id);
-    });
-
-    const optionsList = document.querySelector('.options-list');
-    const selectedOption = [...optionsList.children].find((option) => option.classList.contains('selected'));
-    const selectedGrade = selectedOption? selectedOption.getAttribute('data-value') : null;
-    let currentDate = new Date().toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: '2-digit',
-  day: '2-digit'
-});
-let currentTime = new Date().toLocaleTimeString('en-US', {
-  hour: '2-digit',
-  minute: '2-digit',
-  second: '2-digit'
-});
-
-const name = document.getElementById('name').value;
-const other = document.getElementById('other').value;
-const ambassador = document.getElementById('ambassador').value;
-const country = document.getElementById('con').textContent;
-const school = document.getElementById('school').value;
-const birth = document.getElementById('birth').value;
-const email = document.getElementById('email').value;
-
-
-const usersRef = collection(db, 'competitiors');
-const userRef = doc(usersRef, email);
-setDoc(userRef, {
-  name: name,
-  email: email,
-  birth: birth,
-  school: school,
-  country: country,
-  grade: selectedGrade,
-  hear: selectedValues,
-  ambassador: ambassador,
-  other: other,
-  date: currentDate,
-  time: currentTime
-})
-.then(() => {
-  document.body.style.overflow = 'hidden';
-document.getElementById('loading').classList.add('active');
-setTimeout(function() {
-  location.href = './submitted'
-}, 3000);
-})
-.catch((error) => {
-  document.getElementById('popup-text').innerHTML = 'Error Submitting:', error;
-  document.getElementById('popup').classList.add('active');
-});
-
-
-      }})
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getFirestore, doc, setDoc, collection } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
       
-
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCp5YscKqWKU97TU3eq7_xLkapgCTClRlY",
+          authDomain: "iyna-portal.firebaseapp.com",
+          databaseURL: "https://iyna-portal-default-rtdb.firebaseio.com",
+          projectId: "iyna-portal",
+          storageBucket: "iyna-portal.appspot.com",
+          messagingSenderId: "256208881067",
+          appId: "1:256208881067:web:f37186387ac82366003eee",
+          measurementId: "G-8C9VQ9BH0F"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+      
+        document.getElementById('submit').addEventListener('click', (e) => {
+          e.preventDefault();
+      
+          // Validation
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const birth = document.getElementById('birth').value;
+          const school = document.getElementById('school').value;
+          const country = document.getElementById('con').textContent;
+          const optionsList = document.querySelector('.options-list');
+          const selectedOption = [...optionsList.children].find((option) => option.classList.contains('selected'));
+          const selectedGrade = selectedOption ? selectedOption.getAttribute('data-value') : null;
+          const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+          const selectedValues = [];
+          checkboxes.forEach((checkbox) => {
+            selectedValues.push(checkbox.id);
+          });
+      
+          if (name === '') {
+            document.getElementById('popup-text').innerHTML = 'Enter your Full name';
+            document.getElementById('popup').classList.add('active');
+            return;
+          } else if (email === '') {
+            document.getElementById('popup-text').innerHTML = 'Enter your email address';
+            document.getElementById('popup').classList.add('active');
+            return;
+          } else if (birth === '') {
+            document.getElementById('popup-text').innerHTML = 'Enter your date of birth';
+            document.getElementById('popup').classList.add('active');
+            return;
+          } else if (school === '') {
+            document.getElementById('popup-text').innerHTML = 'Enter your High school';
+            document.getElementById('popup').classList.add('active');
+            return;
+          } else if (country === 'Select Country') {
+            document.getElementById('popup-text').innerHTML = 'Enter your Country';
+            document.getElementById('popup').classList.add('active');
+            return;
+          } else if (!selectedGrade) {
+            document.getElementById('popup-text').innerHTML = 'Enter your Grade';
+            document.getElementById('popup').classList.add('active');
+            return;
+          } else if (selectedValues.length === 0) {
+            document.getElementById('popup-text').innerHTML = 'Enter how did you hear about us';
+            document.getElementById('popup').classList.add('active');
+            return;
+          }
+      
+          // Get other values
+          const other = document.getElementById('other').value;
+          const ambassador = document.getElementById('ambassador').value;
+      
+          // Get current date and time
+          let currentDate = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+          });
+          let currentTime = new Date().toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+          });
+      
+          // Save data to Firestore
+          const usersRef = collection(db, 'competitiors');
+          const userRef = doc(usersRef, email);
+          setDoc(userRef, {
+            name: name,
+            email: email,
+            birth: birth,
+            school: school,
+            country: country,
+            grade: selectedGrade,
+            hear: selectedValues,
+            ambassador: ambassador,
+            other: other,
+            date: currentDate,
+            time: currentTime
+          })
+          .then(() => {
+            document.body.style.overflow = 'hidden';
+            document.getElementById('loading').classList.add('active');
+            setTimeout(function() {
+              location.href = 'submitted.html'
+            }, 3000);
+          })
+          .catch((error) => {
+            document.getElementById('popup-text').innerHTML = 'Error Submitting: ' + error;
+            document.getElementById('popup').classList.add('active');
+          });
+        });
       </script>
     
    </body>
