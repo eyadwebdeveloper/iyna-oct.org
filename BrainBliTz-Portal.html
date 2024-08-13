@@ -400,7 +400,10 @@
             document.getElementById('popup').classList.add('active');
             return;
           }
-      
+      else{
+        document.body.style.overflow = 'hidden';
+        document.getElementById('loading').classList.add('active');
+  
           // Get other values
           const other = document.getElementById('other').value;
           const ambassador = document.getElementById('ambassador').value;
@@ -434,16 +437,18 @@
             time: currentTime
           })
           .then(() => {
-            document.body.style.overflow = 'hidden';
-            document.getElementById('loading').classList.add('active');
             setTimeout(function() {
-              location.href = 'submitted.html'
-            }, 3000);
+              location.href = './submitted'
+            }, 3500);
           })
           .catch((error) => {
+            document.body.style.overflow = 'visible';
+            document.getElementById('loading').classList.remove('active');
             document.getElementById('popup-text').innerHTML = 'Error Submitting: ' + error;
             document.getElementById('popup').classList.add('active');
           });
+          
+      }
         });
       </script>
     
