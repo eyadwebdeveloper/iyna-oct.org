@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Program | IYNA</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/answers.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/logo.png"/>
+    
+  </head>
+  <style>
+    .controls{
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .controls a.signout{
+        background: #950a55;
+        padding: 10px;
+        color: #f5f3f3;
+        border-radius: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        top: 0;
+    }
+    header{
+        position: fixed;
+        padding: 20px;
+        top: 0;
+        width: 100%;
+        background: #950a55;
+        z-index: 9999999;
+    }
+    header a{
+        font-size: 17px;
+        color: #fff;
+        text-decoration: none;
+    }
+  </style>
+  <body>
+    
+    
+    <div class="popup-container" id="popup">
+      <div class="popup-box">
+          <h2 id="popup-text">Welcome</h2>
+          <div class="links">
+            <a class="close-btn" id="popup-link">Ok</a>
+          </div>
+      </div>
+    </div>
+    <header>
+      <a href="./Status?tab=status"><< Back to status</a>
+      <button class="signout" id="signout">Sign out</button>
+    </header>
+    <section class="dots-container" id="loading">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </section>
+ <div class="body">
+  <div class="container">
+  
+    <div class="content">
+      <h2 id="answers-title">Answers</h2>
+      <form id="form" action="">
+        <h3>Personal Info</h3>
+        <hr>
+        <label for="name">Full name</label>
+        <input type="text" placeholder="Enter your Full Name" id="name" readonly>
+        <label for="email">Email Adress</label>
+        <input type="email" placeholder="Enter your Email address" id="email" readonly>
+        <label for="tel">Phone number</label>
+        <input type="tel" placeholder="Enter your Phone number" id="tel" readonly>
+        <label for="country">Country</label>
+        <input type="text" placeholder="Country" id="country" readonly>
+        <label for="school">Current School/University</label>
+        <input type="text" placeholder="Enter your current School/University" id="school" readonly>
+        <label for="grade">Grade</label>
+        <div class="select" id="grade" readonly>
+          <span class="span">
+              Select
+          </span>
+          <!-- icon -->
+          <ul style="display: none;">
+              <li>Grade 9</li>
+              <li>Grade 10</li>
+              <li>Grade 11</li>
+              <li>Grade 12</li>
+              <li>Other</li>
+          </ul>
+      </div>
+      <h3>Personal Essays</h3>
+      <hr>
+      <label for="Essay1">What are your long-term academic and/or career goals, and how do you think studying neuroscience could help you achieve those goals? Discuss your passion for this field and how it aligns with your future aspirations.</label>
+      <textarea placeholder="Your answer..." id="essay1" readonly></textarea>
+      <h4 id="e1counter">0/150-250</h4>
+      <label for="Essay2">How do you plan to stay motivated throughout the course of this program?</label>
+      <textarea placeholder="Your answer..." id="essay2" readonly></textarea>
+      <h4 id="e2counter">0/200</h4>
+      <label for="Essay3">If you could ask a neuroscientist any question, what would it be and why?</label>
+      <textarea placeholder="Your answer..." id="essay3" readonly></textarea>
+      <h4 id="e3counter">0/150-250</h4>
+      <label for="Essay4">Do you have any question ?</label>
+      <textarea placeholder="Fell free..!" id="essay4" readonly></textarea>
+        
+      </form>
+    </div>
+  </div>
+  
+ </div>
+    <script type="module" src="js/answers.js"></script>
+    <script>
+        window.onload = ()=>{
+            document.getElementById('loading').style.display = 'flex';
+  setTimeout( ()=> {
+    document.getElementById('loading').style.display = 'none';
+  }, 3000);
+        }
+    </script>
+  </body>
+</html>

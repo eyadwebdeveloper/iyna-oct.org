@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Program | IYNA</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />	
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/logo.png"/>
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/status.css">
+    
+  </head>
+  <body>
+    <div class="popup-container" id="popup">
+      <div class="popup-box">
+          <h2 id="popup-text">Welcome</h2>
+          <div class="links">
+            <a class="close-btn" id="popup-link">Ok</a>
+          </div>
+      </div>
+    </div>
+    <section class="dots-container" id="loading">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </section>
+    <header>
+      <div class="head">
+        <img src="imgs/logo.png" alt="">
+        <h1>IYNA OCT.<br><span>BRANCH</span></h1>
+      </div>
+      <div class="header-title">
+        <h2>2024 SUMMER PROGRAM</h2>
+      </div>
+      <button class="signout" id="signout">Sign out</button>
+    </header>
+    <div class="body">
+      <div class="container">
+        <div class="controls">
+          <div class="tabs">
+            <a href="./Status?tab=status" id="status-tab">Status</a>
+            <a href="./Status?tab=announcments" id="announcments-tab">Announcments</a>
+            <a href="./Status?tab=contact" id="contact-tab">Contact</a>
+          </div>
+        </div>
+        <h1><span id="status-name"></span> | 2024 IYNA Summer program application</h1>
+          <div class="status" id="status">
+            <div class="big">
+              <h2>Status Updates</h2>
+              <p>no status updates yet</p>
+            </div>
+            <div class="smalls">
+              <div class="first-small">
+                <h2>Checklist</h2>
+                <div class="checkbox application">
+                  <input type="checkbox"  checked disabled/>
+                  <label for="application">Application</label>
+                </div>
+                <div class="checkbox reviewed">
+                  <input type="checkbox" checked disabled />
+                  <label for="reviewed">Reviewed</label>
+                </div>
+              </div>
+              <div class="second-small">
+                <h2>Adimtion Status</h2>
+                <p>Your Application is submitted on <span id="status-date"></span> and is currnetly being reviewed, <a href="./Answers">Click here</a> to view your answers</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="content" id="announcments">
+            <h2>No announcments yet!</h2>
+          </div>
+          
+          <div class="content" id="contact">
+            <h2>Contact us if you need any help.</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="8cc708c8-8bf8-42ff-9b1f-42786fd1c9c0">
+                <input type="text" placeholder="Full name" name="Name" required>
+                <input type="email" placeholder="Email Adress" name="Email" required>
+                <textarea name="Message" placeholder="Your message" required></textarea>
+                <div class="buttons">
+                    <button type="submit">Submit Form</button>
+                  </div>
+            </form>
+          </div>
+          
+        </div>
+    </div>
+    
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+  
+        <h3>IYNA<span>October</span></h3>
+  
+        <p class="footer-links">
+          
+          <a href="https://iyna-oct.site" class="link-1">Home</a>
+
+          <a href="https://iyna-oct.site/issues">Issues</a>
+          
+          <a href="https://iyna-oct.site/courses">Courses</a>
+        
+          <a href="https://iyna-oct.site/contact">Contact</a>
+
+          <a href="https://iyna-oct.site/publish">Publish</a>
+          
+        </p>
+  
+        <p class="footer-company-name"><i class="fa-regular fa-copyright"></i> 2020-2024 IYNA October chapter | All Rights Reserved.</p>
+      </div>
+  
+      <div class="footer-center">
+  
+        <div>
+          <i class="fa-solid fa-map-location-dot"></i>
+          <p><span>6th of October</span> Giza, Egypt</p>
+        </div>
+  
+        <div>
+          <i class="fa fa-phone"></i>
+          <a href="Tel:+201102432367"><p>+20 1102432367</p></a>
+        </div>
+  
+        <div>
+          <i class="fa-solid fa-envelope-open-text"></i>
+          <p><a href="mailto:iynaoctoberchapter12@gmail.com">iynaoctoberchapter12@gmail.com</a></p>
+        </div>
+  
+      </div>
+  
+      <div class="footer-right">
+  
+        <p class="footer-company-about">
+          <span>About the Chapter</span>
+          Passionate young neuroscientists are dedicated to aiding the next generation in understanding neuroscience through events, websites, sessions, and research papers.
+        </p>
+  
+        <div class="footer-icons">
+  
+  
+          <a href="https://www.facebook.com/iynaoctoberchapter?mibextid=kFxxJD" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/iyna.october?igsh=MWZkY3UzamZrOW5xZQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/iyna-october-chapter/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/eyadwebdeveloper" target="_blank"><i class="fa-brands fa-github"></i></a>
+  
+        </div>
+  
+      </div><br><br>
+      <a href="Tel:+201111605702" style="text-decoration: none;"><p style="color: white;text-align: center;"><span style="margin-right: 10px;">Website Manager: Eyad Ashraf</span><i class="fa fa-phone"></i><span style="margin-left: 5px;">+201111605702</span></p></a>
+  
+    </footer>
+    
+    <script type="module" src="js/status-back.js"></script>
+    <script src="js/status.js"></script>
+  </body>
+</html>

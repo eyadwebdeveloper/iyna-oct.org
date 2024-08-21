@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Program | IYNA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />	
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="shortcut icon" type="image/jpg" href="imgs/logo.png"/>
+    
+  </head>
+  <body>
+    <div class="popup-container" id="popup">
+      <div class="popup-box">
+          <h2 id="popup-text">Welcome</h2>
+          <div class="links">
+            <a class="close-btn" id="popup-link">Ok</a>
+          </div>
+      </div>
+    </div>
+    <section class="dots-container" id="loading">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </section>
+    <header>
+      <div class="head">
+        <img src="imgs/logo.png" alt="">
+        <h1>IYNA OCT.<br><span>BRANCH</span></h1>
+      </div>
+      <div class="header-title">
+        <h2>2024 SUMMER PROGRAM</h2>
+      </div>
+      <button class="signout" id="signout">Sign out</button>
+    </header>
+    <div class="body">
+      <div class="container">
+        <div class="controls">
+          <div class="tabs">
+            <a href="./Application?tab=rules" id="rules-tab">Rules</a>
+            <a href="./Application?tab=portal" id="portal-tab">Portal</a>
+          </div>
+        </div>
+          <div class="content" id="rules">
+            <h2>IYNA Oct. Summer program</h2>
+            <h3 id="welcome"></h3>
+            <p>By applying to this form, you are applying to join our academics committee. In the academics committee, you will share in the process of spreading neuroscience among high school students. You will take part in material preparation, neuroscience explanation, preparing for our neuroscience summer competition, as well as other activities made by the chapter. The application process compromises two stages, this application and an interview. Shortlisted applicants will be emailed with the interview information. The applicant with the best application will be assigned the head of the academics committee. <br><br><strong>Application deadline is on 15th of August at 11:59 PM</strong><br><br>For more information, check our online platforms:</p>
+            <ul class="social-icons">
+              <li class="icon-content">
+                <a
+                  href="https://www.facebook.com/iynaoctoberchapter?mibextid=ZbWKwL"
+                  aria-label="Fcebook"
+                  data-social="facebook"
+                  class="link"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path  fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+                </a>
+                <div class="tooltip">Facebook</div>
+              </li>
+              <li class="icon-content">
+                <a
+                  href="https://linktr.ee/IYNAOctober"
+                  aria-label="Linktree"
+                  data-social="linktree"
+                  class="link"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><path  fill="currentColor" d="m13.736 5.853l4.005-4.117l2.325 2.38l-4.2 4.005h5.908v3.305h-5.937l4.229 4.108l-2.325 2.334l-5.74-5.769l-5.741 5.769l-2.325-2.325l4.229-4.108H2.226V8.121h5.909l-4.2-4.004l2.324-2.381l4.005 4.117V0h3.472zm-3.472 10.306h3.472V24h-3.472z"/></svg>            
+                </a>
+                <div class="tooltip">Linktree</div>
+              </li>
+              <li class="icon-content">
+                <a
+                  href="https://www.instagram.com/iyna.october?igsh=OGl0dXp5Y293eHht"
+                  aria-label="Instagram"
+                  data-social="instagram"
+                  class="link"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>            </a>
+                <div class="tooltip">Instagram</div>
+              </li>
+              <li class="icon-content">
+                <a
+                  href="https://eg.linkedin.com/company/iyna-october-chapter?trk=similar-pages"
+                  aria-label="Linkedin"
+                  data-social="linkedin"
+                  class="link"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                </a>
+                <div class="tooltip">Linkedin</div>
+              </li>
+            </ul>
+            
+          </div>
+          <div class="content" id="portal">
+            <h2>Questions</h2>
+            <form id="form" action="https://script.google.com/macros/s/AKfycby-u_QA7FDWO--FQ6JFYS0H4DdD7qadZTzIRxn92sPj8dQPUusaXTFpUXl07o9GXuizTw/exec" method="post" target="_blank">
+              <h3>Personal Info</h3>
+              <hr>
+              <label for="name">Full name</label>
+              <input type="text" placeholder="Enter your Full Name" id="name" name="name">
+              <label for="email">Email Adress</label>
+              <input type="email" placeholder="Enter your Email address" id="email" name="email">
+              <label for="tel">Phone number</label>
+              <input type="tel" placeholder="Enter your Phone number" id="tel" name="tel">
+              <label for="country">Country</label>
+              <input type="text" placeholder="Country" id="country" name="country">
+              <label for="school">Current School/University</label>
+              <input type="text" placeholder="Enter your current School/University" id="school" name="school">
+              <label for="grade">Grade</label>
+              <div class="select" id="gelement" name="grade">
+                <span class="span" id="grade">Select</span>
+                <!-- icon -->
+                <ul style="display: none;">
+                    <li>Grade 9</li>
+                    <li>Grade 10</li>
+                    <li>Grade 11</li>
+                    <li>Grade 12</li>
+                    <li>Other</li>
+                </ul>
+            </div>
+            <h3>Personal Essays</h3>
+            <hr>
+            <label for="Essay1">What are your long-term academic and/or career goals, and how do you think studying neuroscience could help you achieve those goals? Discuss your passion for this field and how it aligns with your future aspirations.</label>
+            <textarea placeholder="Your answer..." id="essay1" name="Essay1"></textarea>
+            <h4 id="e1counter">0/150-250</h4>
+            <label for="Essay2">How do you plan to stay motivated throughout the course of this program?</label>
+            <textarea placeholder="Your answer..." id="essay2" name="Essay2"></textarea>
+            <h4 id="e2counter">0/200</h4>
+            <label for="Essay3">If you could ask a neuroscientist any question, what would it be and why?</label>
+            <textarea placeholder="Your answer..." id="essay3" name="Essay3"></textarea>
+            <h4 id="e3counter">0/150-250</h4>
+            <label for="time-blocks">List the most important time blocks in your schedule from the beggining of Septemper until the end of october.</label>
+            <input type="text" name="time-blocks" id="time-blocks">
+            <label for="hours">How many hours per week will you devote to the program?</label>
+            <input type="number" name="hours" id="hours">
+            <label for="hear">How did you here about us?</label>
+            <div class="select" id="helement">
+              <span class="span" id="hear">Select</span>
+              <!-- icon -->
+              <ul style="display: none;">
+                  <li>Personal Connections</li>
+                  <li>RoundPier Page</li>
+                  <li>Search Engines (e.g., Google)</li>
+                  <li>Facebook Page</li>
+                  <li>Telegram Channels</li>
+                  <li>Discord</li>
+                  <li>Ambassador</li>
+                  <li>School Counselor</li>
+                  <li>LinkedIn Page</li>
+                  <li>Instagram Page</li>
+                  <li>WhatsApp Groups</li>
+                  <li>Other</li>
+              </ul>
+          </div>
+            <label for="Essay4">Do you have any question ?</label>
+            <textarea placeholder="Fell free..!" id="essay4" name="Essay4"></textarea>
+              <div class="buttons">
+                <button type="submit">Submit Application</button>
+                <button id="progress">Save Progress</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+  
+        <h3>IYNA<span>October</span></h3>
+  
+        <p class="footer-links">
+          
+          <a href="https://iyna-oct.site" class="link-1">Home</a>
+
+          <a href="https://iyna-oct.site/issues">Issues</a>
+          
+          <a href="https://iyna-oct.site/courses">Courses</a>
+        
+          <a href="https://iyna-oct.site/contact">Contact</a>
+
+          <a href="https://iyna-oct.site/publish">Publish</a>
+          
+        </p>
+  
+        <p class="footer-company-name"><i class="fa-regular fa-copyright"></i> 2020-2024 IYNA October chapter | All Rights Reserved.</p>
+      </div>
+  
+      <div class="footer-center">
+  
+        <div>
+          <i class="fa-solid fa-map-location-dot"></i>
+          <p><span>6th of October</span> Giza, Egypt</p>
+        </div>
+  
+        <div>
+          <i class="fa fa-phone"></i>
+          <a href="Tel:+201102432367"><p>+20 1102432367</p></a>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope-open-text"></i>
+          <p><a href="mailto:iynaoctoberchapter12@gmail.com">iynaoctoberchapter12@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the Chapter</span>
+          Passionate young neuroscientists are dedicated to aiding the next generation in understanding neuroscience through events, websites, sessions, and research papers.
+        </p>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/iynaoctoberchapter?mibextid=kFxxJD" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/iyna.october?igsh=MWZkY3UzamZrOW5xZQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/iyna-october-chapter/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/eyadwebdeveloper" target="_blank"><i class="fa-brands fa-github"></i></a>
+  
+        </div>
+  
+      </div><br><br>
+      <a href="Tel:+201111605702" style="text-decoration: none;"><p style="color: white;text-align: center;"><span style="margin-right: 10px;">Website Manager: Eyad Ashraf</span><i class="fa fa-phone"></i><span style="margin-left: 5px;">+201111605702</span></p></a>
+  
+    </footer>
+    <script src="js/home.js"></script>
+    <script type="module" src="js/home-back.js"></script>
+  </body>
+</html>
