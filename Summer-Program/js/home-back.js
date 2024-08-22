@@ -49,7 +49,7 @@ async function checkProgress() {
   console.log('checkProgress() called');
   if (auth.currentUser) {
     console.log('auth.currentUser is not null');
-    document.getElementById('welcome').innerHTML = `Welcome to IYNA October chapter, ${auth.currentUser.displayName}`
+    document.getElementById('welcome').innerHTML = `Hello ${auth.currentUser.displayName}, Welcome to IYNA October Chapter 2024 Summer program!`
     document.getElementById('email').value = auth.currentUser.email;
     try {
       const userRef = doc(db, 'users', auth.currentUser.email);
