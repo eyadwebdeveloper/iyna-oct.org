@@ -101,8 +101,8 @@ let essay1Element = document.getElementById('essay1');
 let e1counter = document.getElementById("e1counter");
 
 essay1Element.addEventListener("input", () => {
-  let txt = essay1Element.value.trim();
-  let e1count = txt.split(/\s+/).filter((item) => item).length;
+  let e1txt = essay1Element.value.trim();
+  let e1count = e1txt.split(/\s+/).filter((item) => item).length;
   e1counter.textContent = e1count + '/150-250';
   if(e1count < 150 || e1count > 250){
       e1counter.style.color = 'red';
@@ -115,8 +115,8 @@ let essay2Element = document.getElementById('essay2');
 let e2counter = document.getElementById("e2counter");
 
 essay2Element.addEventListener("input", () => {
-  let txt = essay2Element.value.trim();
-  let e2count = txt.split(/\s+/).filter((item) => item).length;
+  let e2txt = essay2Element.value.trim();
+  let e2count = e2txt.split(/\s+/).filter((item) => item).length;
   e2counter.textContent = e2count + '/200';
   if(e2count < 200){
     e2counter.style.color = 'red';
@@ -129,8 +129,8 @@ let essay3Element = document.getElementById('essay3');
 let e3counter = document.getElementById("e3counter");
 
 essay3Element.addEventListener("input", () => {
-    let txt = essay2Element.value.trim();
-    let e3count = txt.split(/\s+/).filter((item) => item).length;
+    let e3txt = essay3Element.value.trim();
+    let e3count = e3txt.split(/\s+/).filter((item) => item).length;
     e3counter.textContent = e3count + '/150-250';
     if(e3count < 150 || e3count > 250){
         e3counter.style.color = 'red';
