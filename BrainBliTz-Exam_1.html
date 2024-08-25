@@ -743,18 +743,24 @@ submitBtn.addEventListener('click', (e) => {
     return;
   }
   else{
-    // Send data to database
-    let userID = Math.random().toString(36).substr(2, 9);
-    set(ref(db, 'users/' + userID), {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        score: score
-    });
-    let name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+const userRef = doc(db, 'users', email);
+setDoc(userRef, {
+  name: document.getElementById('name').value,
+  email: document.getElementById('email').value,
+  score: score
+})
+.then(() => {
+  console.log(`User data sent to Firestore successfully!`);
+})
+.catch(error => {
+  console.error(`Error sending user data to Firestore: ${error.message}`);
+});
 
-    document.getElementById('popup-text').innerHTML = `Good job ${name} Your score is ${score} out of 30`;
-    document.getElementById('popup').classList.add('active');
-    score = 0;
+let name = document.getElementById('name').value;
+document.getElementById('popup-text').innerHTML = `Good job ${name} Your score is ${score} out of 30`;
+document.getElementById('popup').classList.add('active');
+score = 0;
   }
 });
 
