@@ -77,7 +77,7 @@ html:focus {
   pointer-events: none;
   z-index: 99999999999;
   transition: 2s ease-in-out;
-  
+    display: none;
 }
 .popup-container.active {
   opacity: 1;
