@@ -228,8 +228,8 @@ form.addEventListener('submit', (event) => {
     showPopup('Please enter The third Essay');
   } else if(e1count < 150 || e1count > 250){
     showPopup('The first Essay must be between 150 and 250 words');
-  } else if(e2count < 200){
-    showPopup('The second Essay must be at least 200 words');
+  } else if(e2count > 200){
+    showPopup('The second Essay must be less than 200 words');
   } else if(e3count < 150 || e3count > 250){
     showPopup('The third Essay must be at least 300 words');
   } else if(document.getElementById('time-blocks').value == ''){
