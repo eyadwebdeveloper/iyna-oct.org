@@ -639,7 +639,7 @@
 
     <script type="module" >
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+      import { getFirestore, doc, setDoc, collection } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
  
  // Your web app's Firebase configuration
  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -656,7 +656,7 @@
  
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
- const db = getDatabase(app);
+ const db = getFirestore(app);
 
  
 
@@ -759,6 +759,8 @@ setDoc(userRef, {
 
 let name = document.getElementById('name').value;
 document.getElementById('popup-text').innerHTML = `Good job ${name} Your score is ${score} out of 30`;
+document.getElementById('popup-link').innerHTML = 'Back to competition page';
+document.getElementById('popup-link').href = './BrainBliTz';
 document.getElementById('popup').classList.add('active');
 score = 0;
   }
