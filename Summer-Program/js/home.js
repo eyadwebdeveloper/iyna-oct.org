@@ -118,7 +118,7 @@ essay2Element.addEventListener("input", () => {
   let e2txt = essay2Element.value.trim();
   let e2count = e2txt.split(/\s+/).filter((item) => item).length;
   e2counter.textContent = e2count + '/200';
-  if(e2count > 200){
+  if(e2count < 200){
     e2counter.style.color = 'green';
   } else{
     e2counter.style.color = 'red';
